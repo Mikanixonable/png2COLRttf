@@ -1,6 +1,7 @@
 # png2COLRttf  
 a wee tool to build colr font from png image  
 png画像からCOLRカラーフォント規格のttfファイルを出力するpythonコード  
+[解説動画](https://www.nicovideo.jp/watch/sm41984071)  
 1.pyは画像処理AIに入力する文字の画像を書き出すコード、2.pyは画像からフォントを出力するコード
   
 #依存  
