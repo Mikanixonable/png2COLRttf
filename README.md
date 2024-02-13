@@ -8,41 +8,41 @@ png画像からCOLRカラーフォント規格のttfファイルを出力するp
 JIS.txt: JIS第一水準の漢字とちょっとキリル文字やギリシャ文字を足してあるテキストファイル  
 fontTester.html: buildフォルダのtest1.ttfというフォントを表示するように設定してあるhtmlファイル。作ったフォントのデバッグ用  
   
-#依存  
+# 依存  
 cmd用にパスを通すもの: potrace,nanoemoji  
 pythonライブラリ: pillow,cv2,lxml  
   
-#準備  
-##anaconda https://www.anaconda.com/ pythonを動かす環境を作るのに使う  
+# 準備  
+## anaconda https://www.anaconda.com/ pythonを動かす環境を作るのに使う  
 ダウンロードしてインストールしpathを通す。windows10の場合  
 設定>システム>詳細情報>システムの詳細設定>環境変数(N)>ユーザーの環境変数>編集(E)>新規  
 から「C:\Users\UserName\anaconda3\Scripts」などとanacondaのあるフォルダを入力しOKを押す  
   
-##potrace https://potrace.sourceforge.net/#downloading 画像をトレースしてsvgにするのに使う
+## potrace https://potrace.sourceforge.net/#downloading 画像をトレースしてsvgにするのに使う
 ダウンロードしpathを通す。windows10の場合  
 設定>システム>詳細情報>システムの詳細設定>環境変数(N)>ユーザーの環境変数>編集(E)>新規
 から「C:\p\potrace」などとpotrace.exeのあるフォルダを入力しOKを押す
  
-##nanoemoji https://github.com/googlefonts/nanoemoji svgからカラーフォントを作るのに使う  
+## nanoemoji https://github.com/googlefonts/nanoemoji svgからカラーフォントを作るのに使う  
 win+rから出る入力フォームにcmdと書いてcmdを起動する。pip install nanoemojiと打ってインストールする  
   
-##pillow  
+## pillow  
 cmdからpip install pillowと打ってインストールする  
 
-##cv2  
+## cv2  
 cmdからpip install cv2と打ってインストールする  
   
-#lxml  
+# lxml  
 cmdからpip install lxmlと打ってインストールする  
   
-#実行  
-##1.pyの実行  
+# 実行  
+## 1.pyの実行  
 JIS.txtにフォントに入れる文字を入れる  
 1.pyのfont_file = r'.\SourceHanSerif-Heavy.otf'のところを自分の持っているフォントファイルの位置に置き換える  
 cmdを起動し、cdコマンドで1.pyのあるフォルダに移動し、python 1.pyと打って実行  
 txtファイルにある文字が一つずつ画像に吐き出される  
   
-##2.pyの実行  
+## 2.pyの実行  
 コード中の
 colorDic = {  
     "main": "#111111",  
@@ -57,6 +57,6 @@ cmdを起動し、cdコマンドで2.pyのあるフォルダに移動し、pytho
 3000文字くらいだと2時間以上かかるので気長に待つ。固まって動かないように見えることもあるが、再びC: >のような表示が出るまで触らずに待つ  
 test1.ttfという名前のカラーフォントがbuildフォルダの中に作成される。フォント名を変えたいときは、コード中のfontname = "test1"の部分を書き換える。  
   
-#png2ttf  
+# png2ttf  
 [png2ttf](https://github.com/Mikanixonable/png2ttf)  
 姉妹プログラム。こっちは画像から普通の白黒フォントを自動生成する
