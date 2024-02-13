@@ -3,14 +3,19 @@ a wee tool to build colr font from png image
 png画像からCOLRカラーフォント規格のttfファイルを出力するpythonコード  
 [解説動画](https://www.nicovideo.jp/watch/sm41984071) 
   
-1.py: は画像処理AIに入力する文字の画像を書き出すコード  
-2.py: 画像からフォントを出力するコード  
-JIS.txt: JIS第一水準の漢字とちょっとキリル文字やギリシャ文字を足してあるテキストファイル  
-fontTester.html: buildフォルダのtest1.ttfというフォントを表示するように設定してあるhtmlファイル。作ったフォントのデバッグ用  
+- 1.py: は画像処理AIに入力する文字の画像を書き出すコード  
+- 2.py: 画像からフォントを出力するコード  
+- JIS.txt: JIS第一水準の漢字とちょっとキリル文字やギリシャ文字を足してあるテキストファイル  
+- fontTester.html: buildフォルダのtest1.ttfというフォントを表示するように設定してあるhtmlファイル。作ったフォントのデバッグ用  
   
 # 依存  
-cmd用にパスを通すもの: potrace,nanoemoji  
-pythonライブラリ: pillow,cv2,lxml  
+cmd用にパスを通すもの: 
+- potrace
+- nanoemoji  
+pythonライブラリ:
+- pillow
+- cv2
+- lxml  
   
 # 準備  
 ## anaconda https://www.anaconda.com/ pythonを動かす環境を作るのに使う  
